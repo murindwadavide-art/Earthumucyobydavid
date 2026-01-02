@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook Login</title>
+</head>
+<body bgcolor="red">
+
+  <!-- Facebook Login Button -->
+  <div 
+    class="fb-login-button"
+    data-width=""
+    data-size="large"
+    data-button-type="login_with"
+    data-layout="default"
+    data-auto-logout-link="false"
+    data-use-continue-as="true">
+  </div>
+
+  <div id="status"></div>
+
+  <!-- Facebook SDK -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : 'APP_ID_YAKO_HAPA',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v19.0'
+      });
+
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    };
+
+    function statusChangeCallback(response) {
+      if (response.status === 'connected') {
+        FB.api('/me', {fields: 'name,email'}, function(user) {
+          document.getElementById('status').innerHTML =
+            'Ume-login kama: ' + user.name;
+        });
+      } else {
+        document.getElementById('status').innerHTML =
+          'Tafadhali login kwa Facebook.';
+      }
+    }
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  <script>
+  <body>
+  </script>
+  <html><p style="color: green;"><marquee direction="right">WELCOME TO UMUCYO WEBSITE</marquee></p>
+ <label style="color: yellow;">firstname:</label>
+ <input type="text" placeholder="Enter your firstname"><br><br>
+  <label style="color: yellow;">second name:</label>
+" <input type="text" placeholder="Enter your secondname"><br><br>
+"  <label style="color: white;">address:</label>
+ <input type="text" placeholder="Enter your address"><br><br>
+  <label style="color: pink;">date:</label>
+ <input type="date" name="birthday"><br><br>
+ <label style="color:grey;">sex:</label>
+ <input type="radio">Male<br><br>
+ <input type="radio">Female<br><br>
+   </select>
+     <p style="color: white;"><i>CHOOSE THE PROVINCE WITH DISTRICT</i> </p>
+     <option>northern</option>
+     </select>
+     <select>
+          <option>gicumbi</option>
+   <option>musanze</option>
+   <option>burera</option>
+   <option>Rurindo</option>
+   <option>gakenke</option>
+   </select> <br><br><br>
+     <option>western</option>
+  </select>
+  <select>
+    <option>karongi</option>
+    <option>rubavu</option>
+    <option>rusizi</option>
+    <option>nyamasheke</option>
+    <option>rutsiro</option>
+    <option>ngororero</option>
+    <option>nyabihu</option>
+  </select> <br><br><br>
+    <option>southern</option>
+  </select>
+  <select>
+    <option>muhanga</option>
+    <option>ruhango</option>
+    <option>nyanza</option>
+    <option>nyamagabe</option>
+    <option>nyaruguru</option>
+    <option>huye</option>
+    <option>gisagara</option>
+    <option>kamonyi</option>
+  </select> <br><br><br>
+     <option>eastern</option>
+   </select>
+     <select>
+    <option>nyagatare</option>
+    <option>ngoma</option>
+    <option>kirehe</option>
+    <option>rwamagana</option>
+    <option>bugesera</option>
+    <option>gatsibo</option>
+    <option>kayonza</option>
+    <option>gisagara</option>
+  </select>
+    <br><br><br>
+    <option>kigali</option>
+ </select>
+  <select>
+   <option>gasabo</option>
+   <option>kicukiro</option>
+   <option>nyarugenge</option>
+   <option>nyamagabe</option>
+   <option>nyaruguru</option>
+ </select><br><br
+ <label><b>selectfileto upload</b></label><br><br><br>
+ pick your favorite color:
+ <input type="color" name="color" value=""><br><br>
+	  <meta name="keywords" content="web design, affordable web design, professional web design">
+  	<meta name="author" content="Brad Traversy">
+    <title>David Web Deisgn | About</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="img/favicon.png">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlidirection"></span>David</span> Web Design</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Subscribe To Our Newsletter</h1>
+        <form>
+          <label>comfirm email:</label>
+          <input type="email" placeholder="Enter Email..." required><br><br>
+        <button onclick="alert('are you sure to comfirm your email')">submit</button>
+          <p><h1><marquee behavior="" direction="">PLEASECLICK HERE ESPECIALLY SUBSCRIBE!!!!!!♤♤♤♤♤♧♡</marquee></p>
+          <button style="submit"class="button_1"><marquee direction="down"scrollamount="02">subscribe</marquee></button> <input type="text"placeholder="........."><br><br>    <button type="submit" class="button_1"><marquee direction="down"scrollamount="02">follow</marquee></button><input type="text"placeholder="............"><br><br>
+          <button type="submit" class="button_1"><marquee direction="down"scrollamount="02">follower</marquee></button> <input type="text"placeholder="........."><br><br>
+          <button type="submit" class"="button_1"><marquee direction="down"scrollamount="02">likes</marquee></button> <input type="text"placeholder="........."><br><br
+          <button type="submit" class="button_1"><marquee direction="down"scrollamount="02">share</marquee></button> <input type="text"placeholder="........."><br><br>
+        </form>
+      </div>
+    </section>
+
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <h1 class="page-title">About Us to UMUCYO WEBSITE 📡</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius auctor lacus nec feugiat. Phasellus sit amet ex ipsum. Praesent pharetra tincidunt tempor. Etiam velit eros, dapibus eget porta in, lacinia et magna. Nam eget eros non orci consectetur congue at ac augue. Proin eget arcu in enim feugiat ultricies. Curabitur maximus metus nec metus pretium viverra at et orci. Integer hendrerit ante ut placerat cursus.
+          </p>
+          <p class="dark">
+Aliquam eget pharetra diam. Nulla placerat lorem at turpis tempor, vel ultrices dui tincidunt. Proin quis egestas lorem. Mauris vehicula lectus odio, sit amet dictum justo feugiat a. Praesent id dictum lacus. Sed ullamcorper id erat ut dictum. Fusce porttitor lorem sapien, in aliquet sapien convallis et. Donec nec mauris nulla. Curabitur cursus semper odio, et hendrerit ante. Nunc at cursus ante. Maecenas gravida ligula ut efficitur suscipit. Nulla id turpis varius, pretium nunc sed, fermentum sem. Sed lacinia nunc non interdum pellentesque.
+          </p>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>What We Do</h3>
+            <p>thiswebsite it showallvideo we needforexample if we need comedy it found it ,if we need 🌫newsong it found,if we new news it found in simple word this website comes to solve all problem we have.it happy website  🤓</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+
+    <footer>
+      <p>David Web Deisgn, Copyright &copy; 24/12/2025$copy rigthed by david</p>
+      <a href="NEXT.html">NEXT</a>
+    </footer>
+ </form>   
+</body>
+</html>
