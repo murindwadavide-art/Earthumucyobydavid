@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EARTH – GENERAL WEBSITE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+    header {
+      background: #0a3d62;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: yellow;
+    }
+    section {
+      background: white;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #0a3d62;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    audio, video {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 10px;
+    }
+    .download {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .download:hover {
+      background: yellow;
+      color: black;
+    }
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: yellow;
+      color: black;
+    }
+    input, select {
+      padding: 8px;
+      margin: 5px 0;
+      width: 90%;
+      max-width: 250px;
+    }
+    /* Login box styles */
+    #login-box {
+      text-align: center;
+      padding: 20px;
+      background: white;
+      margin: 80px auto;
+      width: 90%;
+      max-width: 300px;
+      border-radius: 10px;
+    }
+    #message {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN BOX -->
+  <div id="login-box">
+    <h2>Shyiramo Password</h2>
+    <input type="password" id="password" placeholder="Andika password">
+    <br><br>
+    <button onclick="checkPassword()">Injira</button>
+    <p id="message"></p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main-content" style="display:none;">
+
+    <header>
+      <h1>EARTH – GENERAL WEBSITE</h1>
+      <p>Earth w’amakuru, imyidagaduro n’iterambere</p>
+      <nav>
+        <a href="#home">Ahabanza</a>
+        <a href="#amakuru">Amakuru</a>
+        <a href="#amafoto">Amafoto</a>
+        <a href="#audio">Indirimbo</a>
+        <a href="#video">Video</a>
+      </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home">
+      <h2>Ikaze kuri EARTH</h2>
+      <p>EARTH–GENERAL Website ni urubuga ruhuza amakuru, amafoto, indirimbo na video bigamije gusakaza earth n’ubumenyi.</p>
+    </section>
+
+    <!-- AMAKURU -->
+    <section id="amakuru">
+      <h2>📰 Amakuru</h2>
+      <p>Hano tubagezaho amakuru agezweho ajyanye n’imyidagaduro, iterambere n’ubuzima bwa buri munsi.</p>
+    </section>
+
+    <!-- AMA FOTO -->
+    <section id="amafoto">
+      <h2>🖼️ Amafoto</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/400/300?random=11">
+        <img src="https://picsum.photos/400/300?random=12">
+        <img src="https://picsum.photos/400/300?random=13">
+        <img src="https://picsum.photos/400/300?random=14">
+      </div>
+    </section>
+
+    <!-- AUDIO -->
+    <section id="audio">
+      <h2>🎵 Indirimbo</h2>
+      <p>Indirimbo igaragaza earth n’icyizere:</p>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      </audio>
+      <br>
+      <a class="download" href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" download>⬇️ Download Audio</a>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video">
+      <h2>🎬 Video ivuga</h2>
+      <p>if you need this video you can Download it):</p>
+      <video controls>
+        <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+      </video>
+      <br>
+      <a class="download" href="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" download>⬇️ Download Video</a>
+    </section>
+
+    <footer>
+      <p>© 2025 EARTH– GENERAL Website</p>
+    </footer>
+
+  </div> <!-- END MAIN CONTENT -->
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const loginBox = document.getElementById("login-box");
+      const mainContent = document.getElementById("main-content");
+      const message = document.getElementById("message");
+
+      const password = "david2008"; // PASSWORD YAWE
+
+      if(input === password) {
+        loginBox.style.display = "none";
+        mainContent.style.display = "block";
+      } else {
+        message.innerText = "Password si yo ❌";
+      }
+    }
+  </script>
+
+</body>
+</html>

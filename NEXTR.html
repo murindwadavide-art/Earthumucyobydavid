@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"<title></title>
+<style>
+body { font-family: Arial; margin:0; padding:0; background:#f0f0f0; }
+header { background:#333; color:white; text-align:center; padding:20px; }
+section { padding:20px; background:white; margin:10px; border-radius:10px; }
+button, a.button { background:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; transition:0.3s; text-decoration:none; display:inline-block; }
+button:hover, a.button:hover { background:yellow; color:black; }
+select, input { padding:8px; margin:5px 0; width:200px; }
+.article { margin-bottom:15px; }
+</style>
+</head>
+<body>
+
+<header>
+<h1><marquee direction="down">WELCOME TO UMUCYO■■●《《》》》</marquee></h1>
+</header>
+
+<section id="news">
+<h2>Amakuru y’Ibikoresho & Indirimbo</h2>
+<p>Inkuru ya mbere: Iyi ni inkuru y’icyitegererezo kuri page ya mbere.</p>
+<img src="https://via.placeholder.com/300" alt="Foto 1">
+</section>
+
+<section id="music">
+<h2>Indirimbo</h2>
+<audio controls>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+Browser yawe ntishyigikira audio tag.
+</audio>
+</section>
+
+<section id="videos">
+<h2>Amashusho</h2>
+<video width="320" height="240" controls>
+<source src="https://sample-videos.com/video123/mp4/240/big_buck_bunny_240p_1mb.mp4" type="video/mp4">
+Browser yawe ntishyigikira video tag.
+</video>
+</section>
+
+<section id="province-district">
+<h2>Hitamo Province na District</h2>
+<label for="province">Province:</label>
+<select id="province">
+<option value="">--Hitamo Province--</option>
+<option value="northern">Northern</option>
+<option value="southern">Southern</option>
+<option value="eastern">Eastern</option>
+<option value="western">Western</option>
+<option value="kigali">Kigali</option>
+</select>
+
+<label for="district">District:</label>
+<select id="district">
+<option value="">--Hitamo District-
+</select>
+</section>
+ <select>
+   <option>gicumbi</option>
+   <option>musanze</option>
+   <option>burera</option>
+   <option>Rurindo</option>
+   <option>gakenke</option>
+ </select>
+   </select>
+  <select>
+    <option>karongi</option>
+    <option>rubavu</option>
+    <option>rusizi</option>
+    <option>nyamasheke</option>
+    <option>rutsiro</option>
+    <option>ngororero</option>
+    <option>nyabihu</option>
+  </select>
+   <select>
+   <option>muhanga</option>
+   <option>ruhango</option>
+   <option>nyanza</option>
+   <option>nyamagabe</option>
+   <option>nyaruguru</option>
+   <option>huye</option>
+   <option>gisagara</option>
+ </select>
+</select>
+
+     <select>
+    <option>nyagatare</option>
+    <option>ngoma</option>
+    <option>kirehe</option>
+    <option>rwamagana</option>
+    <option>bugesera</option>
+    <option>gatsibo</option>
+    <option>kayonza</option>
+    <option>gisagara</option>
+  </select>
+<section id="newsletter">
+<h2>Subscribe to Newsletter</h2>
+<form>
+<input type="email" placeholder="Enter Email..." required>
+<button type="submit">Submit</button>
+</form>
+</section>
+
+<section id="facebook">
+<h2>Facebook Login</h2>
+<div style="background:#eee; padding:10px; border-radius:5px; text-align:center;">
+<p>Facebook login button iza hano (SDK irashobora kongerwamo)</p>
+<button>Login na Facebook</button>
+</div>
+</section>
+
+<!-- Button yerekeza kuri next.html -->
+<div style="text-align:center; margin:20px;">
+<a href="next.html" class="button">Next</a>
+</div>
+
+<script>
+const districts = {
+northern: ["Gicumbi", "Musanze", "Burera", "Gakenke", "Rulindo"],
+southern: ["Huye", "Nyanza", "Nyaruguru", "Muhanga", "Gisagara"],
+eastern:  ["Rwamagana", "Kayonza", "Kirehe", "Ngoma", "Bugesera"],
+western:  ["Karongi", "Rusizi", "Rubavu", "Nyamasheke", "Rutsiro"],
+kigali:   ["Gasabo", "Kicukiro", "Nyarugenge"]
+};
+const provinceSelect = document.getElementById("province");
+const districtSelect = document.getElementById("district");
+provinceSelect.addEventListener("change", function() {
+  const selectedProvince = this.value;
+  districtSelect.innerHTML = '<option value="">--Hitamo District--</option>';
+  if(selectedProvince && districts[selectedProvince]){
+    districts[selectedProvince].forEach(d => {
+      const option = document.createElement("option");
+      option.value = d.toLowerCase();
+      option.textContent = d;
+      districtSelect.appendChild(option);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
